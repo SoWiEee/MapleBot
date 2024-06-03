@@ -1,11 +1,13 @@
+/* 建立斜線指令 */
+
 const { SlashCommandBuilder } = require('discord.js');
 
-// export let us use data in other file via require()
+// 匯出物件
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('ping')
 		.setDescription('Replies with Pong!'),
-	async execute(interaction) {
-		await interaction.reply('Pong!');
+	async execute(ctx) {
+		await ctx.reply('Pong!');
 	},
 };
